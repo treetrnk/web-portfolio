@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="eng">
+	<head>
+		<title></title>
+		<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300" rel="stylesheet">
+		<style>
+			html,body {
+				font-family: "Open Sans", sans-serif;
+				color: #ccc;
+				overflow-y: hidden;
+				background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('code-bg.png'), #111;
+				background-size: cover;
+				background-position: center center;
+				background-attachment: fixed;
+				width: 100%;
+				/*
+				background-color: #fff;
+				background-color: #2fb4e9;
+				*/
+			}
+			/*
+			#mainContainer:before {
+				content: "";
+				position: fixed;
+				left: -10px;
+				top: -10px;
+				z-index: -5;
+				display: block;
+				background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://static.pexels.com/photos/247791/pexels-photo-247791.png'), #000;
+				width: 110%;
+				height: 110%;
+				-webkit-filter: blur(5px);
+				-moz-filter: blur(5px);
+				-o-filter: blur(5px);
+				-ms-filter: blur(5px);
+				filter: blur(5px);
+			}
+			*/
+			@media only screen and (max-width: 767px) {
+				html, body {
+					overflow: auto;
+				}
+			}
+			@media only screen and (min-width: 768px) {
+				#mainContainer {
+					position: relative;
+					max-width: 100%;
+					height: 100vh;
+				}
+				#main {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+				}
+			}
+			a:link, a:visited, a:active, a:hover {
+				color: #ff5964;
+			}
+			/*
+			.header {
+				border-right: 1px solid #ffe74c;
+			}
+			#nav {
+				color: #ffe74c;
+				background-color: #2fb4e9;
+				width: 50%;
+				height: 150vh;
+				transform: rotate(3deg);
+				position: relative;
+				top: -100px;
+				left: -100px;
+				padding: 20vh 50px;
+				color: #333;
+				border-right: 20px solid #2fb4e9;
+			}
+			*/
+			h1, h2, h3, h4, h5, h6 {
+				font-family: "Roboto", sans-serif;
+				text-transform: uppercase;
+			}
+			/*
+			#nav p {
+				transform: rotate(-3deg);
+			}
+			*/
+			.header h1 {
+				color: #2fb4e9;
+				text-transform: uppercase;
+				/*
+				margin-top: 0px;
+				*/
+			}
+			.header p a {
+				font-size: 115%;
+			}
+			#header {
+				border-right: 2px solid #ffe74c;
+			}
+			#headerMobile {
+				border-bottom: 2px solid #ffe74c;
+			}
+			#headerMobile p a {
+				margin: 0 10px;
+			}
+			#content:first-child {
+				margin-top: 0px;
+			}
+			#content {
+			}
+      .profile {
+        padding: 7px 0 7px 7px;
+      }
+		</style>
+	</head>
+	<body>
+
+		<div class="container" id="mainContainer">
+
+			<section id="main">
+				<div class="row">
+					<div class="col-md-3 col-sm-4 hidden-xs text-right header" id="header">
+						<h1>Nathan Hare</h1>
+						<h3>Web Development<br />Design<br />Hosting</h3>
+						<br />
+						<p>
+							<a href="#" class="navlink">Home</a><br />
+							<a href="#portfolio" class="navlink">Portfolio</a><br />
+							<a href="#contact" class="navlink">Contact</a><br />
+						</p>
+						<br />
+					</div>
+					<div class="col-xs-12 hidden-lg hidden-md hidden-sm text-center header" id="headerMobile">
+						<h1>Nathan Hare</h1>
+						<h3>Web Development<br />Design<br />Hosting</h3>
+						<p>
+							<a href="#" class="navlink">Home</a>
+							<a href="#portfolio" class="navlink">Portfolio</a>
+							<a href="#contact" class="navlink">Contact</a>
+						</p>
+					</div>
+					<div class="col-md-9 col-sm-8 col-xs-12" id="content">
+						<h2>Home</h2>
+						<img src="nathan-hare.png" class="pull-right img-circle profile" width="150" />
+						<p>
+							Hi. I am Nathan Hare, a full-stack web developer living in Central PA with <b>seven years of experience</b>. I have done <a href="#" target="_blank">hundreds of hours of web-related training</a> and have four certifications in server administration. In other words, I can design, create, and host the website you are looking for!
+						</p>
+						<p>
+							Here are the technologies I have experience with:
+						</p>
+						<div class="row">
+							<div class="col-sm-3 col-xs-6">
+								<ul>
+									<li>HTML5</li>
+									<li>CSS3</li>
+									<li>Javascript</li>
+									<li>jQuery</li>
+									<li>AngularJS</li>
+								</ul>
+							</div>
+							<div class="col-sm-3 col-xs-6">
+								<ul>
+									<li>PHP7</li>
+									<li>Django/Python</li>
+									<li>Coldfusion</li>
+									<li>MariaDB/MySQL</li>
+									<li>DB2</li>
+								</ul>
+							</div>
+							<div class="col-sm-3 col-xs-6">
+								<ul>
+									<li>Git</li>
+									<li>Nginx</li>
+									<li>Apache</li>
+									<li>Wordpress</li>
+									<li>Linux Server</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+		<div class="hidden" id="homePage">
+		</div>
+
+		<div class="hidden" id="portfolioPage">
+			<h2>Portfolio</h2>
+      <p>Coming soon...</p>
+      <div class="row">
+        <div class="col-sm-3">
+          <img src="" class="img-responsive" />
+        </div>
+        <div class="col-sm-3">
+          <img src="" class="img-responsive" />
+        </div>
+        <div class="col-sm-3">
+          <img src="" class="img-responsive" />
+        </div>
+        <div class="col-sm-3">
+          <img src="" class="img-responsive" />
+        </div>
+      </div>
+		</div>
+
+		<div class="hidden" id="contactPage">
+			<h2>Contact</h2>
+			<p>I am currently accepting clients. If you are interested in web development, design, or hosting services, please to contact me at <a href="mailto:nathanhareweb@gmail.com">NathanHareWeb@gmail.com</a>.
+		</div>
+
+	</body>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			$('.navlink').click(function() {
+				newPage( $(this).text().toLowerCase() );
+			});
+
+			$('#homePage').html( $('#content').html() );
+
+      console.log(window.location.href);
+      if (window.location.href.indexOf('#portfolio') > -1) {
+        newPage('portfolio');
+      } else if (window.location.href.indexOf('#contact') > -1) {
+        newPage('contact');
+      }
+
+		  $('[data-toggle="tooltip"]').tooltip()
+		});
+
+		function newPage(nextPage) {
+			$('#content').fadeOut();
+			setTimeout(function() {
+				$('#content').html('');
+				$('#content').html( $('#' + nextPage + 'Page').html() );
+				$('#content').show().css('opacity','0').slideDown().animate({opacity: 1}, {queue: false, duration: 'slow'});
+			}, 500);
+		}
+
+	</script>
+</html>
