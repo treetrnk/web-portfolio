@@ -124,6 +124,24 @@
       .portfolio-img {
         cursor: pointer;
       }
+      #imageBackdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+        z-index: 5;
+      }
+      #imageViewer {
+        max-width: 90%;
+        max-height: 90%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+      }
 		</style>
 	</head>
 	<body>
@@ -204,43 +222,38 @@
       <div class="row">
         <div class="col-sm-3">
           <img src="/images/tabfor.png" class="img-responsive portfolio-img" />
-          <h3>Tabfor.org</h3>
+          
+          <h3><a href="https://tabfor.org" target="_blank"><i class="fa fa-globe"></i></a> Tabfor</h3>
           <p>
             Mine cryptocurrency for charity from your browser.
-          </p>
-          <p class="iconLinks text-center">
-            <a href="https://tabfor.org" target="_blank"><i class="fa fa-globe"></i></a>
           </p>
         </div>
         <div class="col-sm-3">
           <img src="/images/employeeportal.png" class="img-responsive portfolio-img" />
-          <h3>The Armory</h3>
+          <h3><a href="https://github.com/treetrnk/employee_portal" target="_blank"><i class="fa fa-github"></i></a> The Armory</h3>
           <p>
             An employee portal built for <a href="http://armgroup.net" target="_blank">ARM Group Inc</a>.
-          </p>
-          <p class="iconLinks text-center">
-            <a href="https://github.com/treetrnk/employee_portal" target="_blank"><i class="fa fa-github"></i></a>
           </p>
         </div>
         <div class="col-sm-3">
           <img src="/images/nhwritings.png" class="img-responsive portfolio-img" />
-          <h3>Writings of Nathan Hare</h3>
+          <h3><a href="http://writing.nathanhare.net" target="_blank"><i class="fa fa-globe"></i></a> <a href="https://github.com/treetrnk/web-author" target="_blank"><i class="fa fa-github"></i></a> Writings</h3>
           <p>
             A simple CMS for publishing web serials.
           </p>
           <p class="iconLinks text-center">
-            <a href="http://writing.nathanhare.net" target="_blank"><i class="fa fa-globe"></i></a>
-            <a href="https://github.com/treetrnk/web-author" target="_blank"><i class="fa fa-github"></i></a>
+            
+            
           </p>
         </div>
         <div class="col-sm-3">
-          <img src="/images/rpgstuff.png" class="img-responsive portfolio-img" />
-          <h3>RPG Stuff</h3>
+          <img src="/images/rpgstuff.png" class="portfolio-img img-responsive" />
+          <h3><a href="https://rpg.nathanhare.net" target="_blank"><i class="fa fa-globe"></i></a> RPG Stuff</h3>
           <p>
             A blog about tabletop roleplaying games.
           </p>
           <p class="iconLinks text-center">
-            <a href="https://rpg.nathanhare.net" target="_blank"><i class="fa fa-globe"></i></a>
+            
           </p>
         </div>
       </div>
@@ -251,11 +264,17 @@
 			<p>I am currently accepting clients. If you are interested in web development, design, or hosting services, please to contact me at <a href="mailto:nathanhareweb@gmail.com">NathanHareWeb@gmail.com</a>.
 		</div>
 
+    <div class="hidden" id="imageBackdrop"></div>
+    <div class="hidden" id="imageViewer"></div>
+
 	</body>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
 	<script>
 		$(document).ready(function () {
+
+      $('#imageViewer').click(closeImageViewer); 
+      $('#imageBackdrop').click(closeImageViewer); 
 
 			$('.navlink').click(function() {
 				newPage( $(this).text().toLowerCase() );
@@ -263,7 +282,6 @@
 
 			$('#homePage').html( $('#content').html() );
 
-      console.log(window.location.href);
       if (window.location.href.indexOf('#portfolio') > -1) {
         newPage('portfolio');
       } else if (window.location.href.indexOf('#contact') > -1) {
@@ -273,12 +291,32 @@
 		  $('[data-toggle="tooltip"]').tooltip()
 		});
 
+    function closeImageViewer() {
+      $('#imageViewer').fadeOut();
+      $('#imageBackdrop').fadeOut();
+      setTimeout(function() {
+        $('#imageViewer').addClass('hidden');
+        $('#imageBackdrop').addClass('hidden');
+      }, 500);
+    }
+
+    function enableImageViewer() {
+      $(".portfolio-img").click(function() {
+        var img = $(this).attr('src');
+        //window.scroll(0,0);
+        $('#imageBackdrop').removeClass('hidden').fadeIn();
+        $('#imageViewer').html('<img src="' + img + '" class="img-responsive" />');
+        $('#imageViewer').removeClass('hidden').fadeIn();
+      });
+    }
+
 		function newPage(nextPage) {
 			$('#content').fadeOut();
 			setTimeout(function() {
 				$('#content').html('');
 				$('#content').html( $('#' + nextPage + 'Page').html() );
 				$('#content').show().css('opacity','0').slideDown().animate({opacity: 1}, {queue: false, duration: 'slow'});
+        enableImageViewer();
 			}, 500);
 		}
 
