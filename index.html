@@ -5,7 +5,7 @@
 		<meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!---<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">--->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300" rel="stylesheet">
     <link href="https://use.fontawesome.com/5c75cade5f.css" media="all" rel="stylesheet">
@@ -24,30 +24,12 @@
 				background-color: #2fb4e9;
 				*/
 			}
-			/*
-			#mainContainer:before {
-				content: "";
-				position: fixed;
-				left: -10px;
-				top: -10px;
-				z-index: -5;
-				display: block;
-				background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://static.pexels.com/photos/247791/pexels-photo-247791.png'), #000;
-				width: 110%;
-				height: 110%;
-				-webkit-filter: blur(5px);
-				-moz-filter: blur(5px);
-				-o-filter: blur(5px);
-				-ms-filter: blur(5px);
-				filter: blur(5px);
-			}
-			*/
-			@media only screen and (max-width: 767px) {
+			@media only screen and (max-width: 767px), only screen and (max-height: 400px) {
 				html, body {
 					overflow: auto;
 				}
 			}
-			@media only screen and (min-width: 768px) {
+			@media only screen and (min-width: 768px) and (min-height: 400px) {
 				#mainContainer {
 					position: relative;
 					max-width: 100%;
@@ -64,33 +46,10 @@
 			a:link, a:visited, a:active, a:hover {
 				color: #ff5964;
 			}
-			/*
-			.header {
-				border-right: 1px solid #ffe74c;
-			}
-			#nav {
-				color: #ffe74c;
-				background-color: #2fb4e9;
-				width: 50%;
-				height: 150vh;
-				transform: rotate(3deg);
-				position: relative;
-				top: -100px;
-				left: -100px;
-				padding: 20vh 50px;
-				color: #333;
-				border-right: 20px solid #2fb4e9;
-			}
-			*/
 			h1, h2, h3, h4, h5, h6 {
 				font-family: "Roboto", sans-serif;
 				text-transform: uppercase;
 			}
-			/*
-			#nav p {
-				transform: rotate(-3deg);
-			}
-			*/
 			.header h1 {
 				color: #2fb4e9;
 				text-transform: uppercase;
@@ -130,12 +89,14 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
         z-index: 5;
       }
       #imageViewer {
-        max-width: 90%;
-        max-height: 90%;
+        max-width: 99%;
+        min-width: 50%;
+        max-height: 99%;
+        min-height: 50%;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -174,7 +135,7 @@
 						<h2>Home</h2>
 						<img src="/images/nathan-hare.png" class="pull-right img-circle profile" width="150" />
 						<p>
-							Hi. I am Nathan Hare, a full-stack web developer living in Central PA with <b>seven years of experience</b>. I have done <a href="#" target="_blank">hundreds of hours of web-related training</a> and have four certifications in server administration. In other words, I can design, create, and host the website you are looking for!
+							Hi. I am Nathan Hare, a full-stack web developer living in Central PA with <b>seven years of experience</b>. I have done <a href="https://www.codeschool.com/users/nahhare" target="_blank">hundreds of hours of web-related training</a> and have four certifications in server administration. In other words, I can design, create, and host the website you are looking for!
 						</p>
 						<p>
 							Here are the technologies I have experience with:
@@ -261,7 +222,7 @@
 
 		<div class="hidden" id="contactPage">
 			<h2>Contact</h2>
-			<p>I am currently accepting clients. If you are interested in web development, design, or hosting services, please to contact me at <a href="mailto:nathanhareweb@gmail.com">NathanHareWeb@gmail.com</a>.
+			<p>I am currently accepting clients. If you are interested in web development, design, or hosting services, please to contact me at <a href="mailto:nathanhareweb@gmail.com">nathanhareweb@gmail.com</a>.
 		</div>
 
     <div class="hidden" id="imageBackdrop"></div>
