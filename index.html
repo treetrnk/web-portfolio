@@ -8,12 +8,13 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300" rel="stylesheet">
+    <link href="https://use.fontawesome.com/5c75cade5f.css" media="all" rel="stylesheet">
 		<style>
 			html,body {
 				font-family: "Open Sans", sans-serif;
 				color: #ccc;
 				overflow-y: hidden;
-				background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('code-bg.png'), #111;
+				background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/images/code-bg.png'), #111;
 				background-size: cover;
 				background-position: center center;
 				background-attachment: fixed;
@@ -117,6 +118,12 @@
       .profile {
         padding: 7px 0 7px 7px;
       }
+      .iconLinks {
+        font-size: 30px;
+      }
+      .portfolio-img {
+        cursor: pointer;
+      }
 		</style>
 	</head>
 	<body>
@@ -147,7 +154,7 @@
 					</div>
 					<div class="col-md-9 col-sm-8 col-xs-12" id="content">
 						<h2>Home</h2>
-						<img src="nathan-hare.png" class="pull-right img-circle profile" width="150" />
+						<img src="/images/nathan-hare.png" class="pull-right img-circle profile" width="150" />
 						<p>
 							Hi. I am Nathan Hare, a full-stack web developer living in Central PA with <b>seven years of experience</b>. I have done <a href="#" target="_blank">hundreds of hours of web-related training</a> and have four certifications in server administration. In other words, I can design, create, and host the website you are looking for!
 						</p>
@@ -194,19 +201,47 @@
 
 		<div class="hidden" id="portfolioPage">
 			<h2>Portfolio</h2>
-      <p>Coming soon...</p>
       <div class="row">
         <div class="col-sm-3">
-          <img src="" class="img-responsive" />
+          <img src="/images/tabfor.png" class="img-responsive portfolio-img" />
+          <h3>Tabfor.org</h3>
+          <p>
+            Mine cryptocurrency for charity from your browser.
+          </p>
+          <p class="iconLinks text-center">
+            <a href="https://tabfor.org" target="_blank"><i class="fa fa-globe"></i></a>
+          </p>
         </div>
         <div class="col-sm-3">
-          <img src="" class="img-responsive" />
+          <img src="/images/employeeportal.png" class="img-responsive portfolio-img" />
+          <h3>The Armory</h3>
+          <p>
+            An employee portal built for <a href="http://armgroup.net" target="_blank">ARM Group Inc</a>.
+          </p>
+          <p class="iconLinks text-center">
+            <a href="https://github.com/treetrnk/employee_portal" target="_blank"><i class="fa fa-github"></i></a>
+          </p>
         </div>
         <div class="col-sm-3">
-          <img src="" class="img-responsive" />
+          <img src="/images/nhwritings.png" class="img-responsive portfolio-img" />
+          <h3>Writings of Nathan Hare</h3>
+          <p>
+            A simple CMS for publishing web serials.
+          </p>
+          <p class="iconLinks text-center">
+            <a href="http://writing.nathanhare.net" target="_blank"><i class="fa fa-globe"></i></a>
+            <a href="https://github.com/treetrnk/web-author" target="_blank"><i class="fa fa-github"></i></a>
+          </p>
         </div>
         <div class="col-sm-3">
-          <img src="" class="img-responsive" />
+          <img src="/images/rpgstuff.png" class="img-responsive portfolio-img" />
+          <h3>RPG Stuff</h3>
+          <p>
+            A blog about tabletop roleplaying games.
+          </p>
+          <p class="iconLinks text-center">
+            <a href="https://rpg.nathanhare.net" target="_blank"><i class="fa fa-globe"></i></a>
+          </p>
         </div>
       </div>
 		</div>
