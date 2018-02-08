@@ -27,7 +27,8 @@
     <!---<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">--->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300" rel="stylesheet">
-    <link href="https://use.fontawesome.com/5c75cade5f.css" media="all" rel="stylesheet">
+    <!--<link href="https://use.fontawesome.com/5c75cade5f.css" media="all" rel="stylesheet">-->
+
 		<style>
 			html,body {
 				font-family: "Open Sans", sans-serif;
@@ -43,12 +44,12 @@
 				background-color: #2fb4e9;
 				*/
 			}
-			@media only screen and (max-width: 767px), only screen and (max-height: 400px) {
+			@media only screen and (max-width: 767px), only screen and (max-height: 424px) {
 				html, body {
 					overflow: auto;
 				}
 			}
-			@media only screen and (min-width: 768px) and (min-height: 400px) {
+			@media only screen and (min-width: 768px) and (min-height: 425px) {
 				#mainContainer {
 					position: relative;
 					max-width: 100%;
@@ -60,6 +61,8 @@
 					left: 50%;
 					transform: translate(-50%, -50%);
 					width: 100%;
+          height: 325px;
+          overflow: visible;
 				}
 			}
 			a:link, a:visited, a:active, a:hover {
@@ -128,6 +131,9 @@
         width: 50%;
         overflow: hidden;
       }
+      h3.popover-title {
+        color: #222222;
+      }
 		</style>
 	</head>
 	<body>
@@ -160,7 +166,8 @@
 						<h2>Home</h2>
 						<img src="/images/nathan-hare.png" class="pull-right img-circle profile" width="150" />
 						<p>
-							Hi. I am Nathan Hare, a full-stack web developer living in Central PA with <b>seven years of experience</b>. I have done <a href="https://www.codeschool.com/users/nahhare" target="_blank">hundreds of hours of web-related training</a> and have four certifications in server administration. In other words, I can design, create, and host the website you are looking for!
+            Hi. I am Nathan Hare, a full-stack web developer living in Central PA with over <a href="https://www.linkedin.com/in/nathan-hare-690989a5/" target="_blank">five years of experience</a>. I have done <a href="https://www.codeschool.com/users/nahhare" target="_blank">hundreds of hours of web-related training</a> and have 
+            <abbr title="" data-toggle="popover" data-title="Certifications" data-placement="top" data-html="true" data-content="<a href='https://www.youracclaim.com/badges/8f17d61d-53a5-4c9d-8e2b-8d2e2bd17d76' target='_blank'>Linux Essentials</a><br /><a href='https://www.youracclaim.com/badges/9bac684d-f532-4bb4-9871-dc8ba5f6ed91' target='_blank'>LPIC-1</a><br /><a href='https://www.certmetrics.com/comptia/public/verification.aspx?code=1TCKPJEMJPQE2XW7' target='_blank'>Linux+</a><br /><a href='https://i7lp.integral7.com/durango/do/candidate/aps/certprogress?ownername=novell&E3EAFEF0E33085858ED8F4537A799104=912DC991C6D802500C751FFCDB55A801&usertype=candidate' target='_blank'>Suse Certified Linux Administrator</a><br/>">four certifications in server administration</abbr>. In other words, I can design, create, and host the website you are looking for!
 						</p>
 						<p>
 							Here are the technologies I have experience with:
@@ -233,21 +240,21 @@
         <div class="col-sm-3">
           <img src="/images/tabfor.png" class="img-responsive portfolio-img" />
           
-          <h3><a href="https://tabfor.org" target="_blank"><i class="fa fa-globe"></i></a> Tabfor</h3>
+          <h3><a href="https://tabfor.org" target="_blank"><i class="fa fa-link"></i></a> Tabfor</h3>
           <p>
             Mine cryptocurrency for charity from your browser.
           </p>
         </div>
         <div class="col-sm-3">
           <img src="/images/employeeportal.png" class="img-responsive portfolio-img" />
-          <h3><a href="https://github.com/treetrnk/employee_portal" target="_blank"><i class="fa fa-github"></i></a> The Armory</h3>
+          <h3><a href="https://github.com/treetrnk/employee_portal" target="_blank"><i class="fab fa-github"></i></a> The Armory</h3>
           <p>
             An employee portal built for <a href="http://armgroup.net" target="_blank">ARM Group Inc</a>.
           </p>
         </div>
         <div class="col-sm-3">
           <img src="/images/nhwritings.png" class="img-responsive portfolio-img" />
-          <h3><a href="http://writing.nathanhare.net" target="_blank"><i class="fa fa-globe"></i></a> <a href="https://github.com/treetrnk/web-author" target="_blank"><i class="fa fa-github"></i></a> Writings</h3>
+          <h3><a href="http://writing.nathanhare.net" target="_blank"><i class="fa fa-link"></i></a> <a href="https://github.com/treetrnk/web-author" target="_blank"><i class="fab fa-github"></i></a> Writings</h3>
           <p>
             A simple CMS for publishing web serials.
           </p>
@@ -258,7 +265,7 @@
         </div>
         <div class="col-sm-3">
           <img src="/images/rpgstuff.png" class="portfolio-img img-responsive" />
-          <h3><a href="https://rpg.nathanhare.net" target="_blank"><i class="fa fa-globe"></i></a> RPG Stuff</h3>
+          <h3><a href="https://rpg.nathanhare.net" target="_blank"><i class="fa fa-link"></i></a> RPG Stuff</h3>
           <p>
             A blog about tabletop roleplaying games.
           </p>
@@ -280,6 +287,7 @@
 	</body>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	<script>
 		$(document).ready(function () {
 
@@ -299,6 +307,7 @@
       }
 
 		  $('[data-toggle="tooltip"]').tooltip()
+      enablePopover();
 		});
 
     function closeImageViewer() {
@@ -320,6 +329,10 @@
       });
     }
 
+    function enablePopover() {
+      $('[data-toggle="popover"]').popover()
+    }
+
 		function newPage(nextPage) {
 			$('#content').fadeOut();
 			setTimeout(function() {
@@ -327,6 +340,7 @@
 				$('#content').html( $('#' + nextPage + 'Page').html() );
 				$('#content').show().css('opacity','0').slideDown().animate({opacity: 1}, {queue: false, duration: 'slow'});
         enableImageViewer();
+        enablePopover();
 			}, 500);
 		}
 
