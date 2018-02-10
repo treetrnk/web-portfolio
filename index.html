@@ -104,24 +104,41 @@
       }
       .portfolio-img {
         cursor: pointer;
+        cursor: -moz-zoom-in; 
+        cursor: -webkit-zoom-in; 
+        cursor: zoom-in;
       }
       #imageBackdrop {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
         z-index: 5;
+        cursor: pointer;
+        cursor: -moz-zoom-out; 
+        cursor: -webkit-zoom-out; 
+        cursor: zoom-out;
       }
       #imageViewer {
-        max-width: 99%;
-        max-height: 99%;
+        width: 90%;
+        height: 90%;
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 10;
+        text-align: center;
+        cursor: pointer;
+        cursor: -moz-zoom-out; 
+        cursor: -webkit-zoom-out; 
+        cursor: zoom-out;
+      }
+      .zoomed {
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
       }
       .two-col-list { 
         width: 100%;
@@ -281,8 +298,9 @@
 			<p>I am currently accepting clients. If you are interested in web development, design, or hosting services, please to contact me at <a href="mailto:nathanhareweb@gmail.com">nathanhareweb@gmail.com</a>.
 		</div>
 
-    <div class="hidden" id="imageBackdrop"></div>
-    <div class="hidden" id="imageViewer"></div>
+    <div class="hidden" id="imageBackdrop">
+      <div id="imageViewer"></div>
+    </div>
 
 	</body>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -311,10 +329,8 @@
 		});
 
     function closeImageViewer() {
-      $('#imageViewer').fadeOut();
       $('#imageBackdrop').fadeOut();
       setTimeout(function() {
-        $('#imageViewer').addClass('hidden');
         $('#imageBackdrop').addClass('hidden');
       }, 500);
     }
@@ -324,8 +340,7 @@
         var img = $(this).attr('src');
         //window.scroll(0,0);
         $('#imageBackdrop').removeClass('hidden').fadeIn();
-        $('#imageViewer').html('<img src="' + img + '" class="img-responsive" />');
-        $('#imageViewer').removeClass('hidden').fadeIn();
+        $('#imageViewer').html('<img src="' + img + '" class="img-responsive zoomed" />');
       });
     }
 
