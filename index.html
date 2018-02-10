@@ -138,7 +138,7 @@
       .zoomed {
         max-width: 100%;
         max-height: 100%;
-        margin: auto;
+        box-shadow: 2px 2px 15px #000000;
       }
       .two-col-list { 
         width: 100%;
@@ -340,7 +340,7 @@
         var img = $(this).attr('src');
         //window.scroll(0,0);
         $('#imageBackdrop').removeClass('hidden').fadeIn();
-        $('#imageViewer').html('<img src="' + img + '" class="img-responsive zoomed" />');
+        $('#imageViewer').html('<img src="' + img + '" class="zoomed" />');
       });
     }
 
